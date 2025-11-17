@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hyda Global Trading - Votre expert en pneus à Djibouti</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%232c3e50' stroke='%23e74c3c' stroke-width='8'/><circle cx='50' cy='50' r='25' fill='none' stroke='%23e74c3c' stroke-width='5'/><circle cx='50' cy='50' r='8' fill='%23e74c3c'/></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Variables et reset */
@@ -460,12 +461,42 @@
             border-radius: 10px;
             overflow: hidden;
             box-shadow: var(--shadow);
+            background-color: var(--light);
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
         }
 
-        .ad-image img {
-            width: 100%;
-            height: auto;
-            display: block;
+        .ad-image-content {
+            text-align: center;
+        }
+
+        .ad-image h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .ad-image p {
+            color: var(--text);
+            margin-bottom: 1rem;
+        }
+
+        .ad-image-models {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .ad-image-model {
+            background-color: var(--primary);
+            color: var(--light);
+            padding: 0.5rem 1rem;
+            border-radius: 3px;
+            font-size: 0.9rem;
         }
 
         /* Section Contact */
@@ -618,6 +649,24 @@
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary);
+                flex-direction: column;
+                padding: 1rem 0;
+                box-shadow: var(--shadow);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 0;
+                text-align: center;
+                padding: 0.8rem 0;
             }
 
             .mobile-menu {
@@ -645,6 +694,10 @@
             .ad-models {
                 flex-direction: column;
                 align-items: center;
+            }
+
+            .ad-images {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -880,10 +933,29 @@
             
             <div class="ad-images">
                 <div class="ad-image">
-                    <img src="Images/Publicite1.jpeg" alt="Gamme de pneus pour votre flotte de véhicules">
+                    <div class="ad-image-content">
+                        <h3>Gamme Parfaite pour Votre Flotte</h3>
+                        <p>Des pneus adaptés à tous vos véhicules</p>
+                        <div class="ad-image-models">
+                            <span class="ad-image-model">NY-05</span>
+                            <span class="ad-image-model">H0105</span>
+                            <span class="ad-image-model">H0107</span>
+                            <span class="ad-image-model">H0302</span>
+                            <span class="ad-image-model">H0308A</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="ad-image">
-                    <img src="Images/publicite2.jpeg" alt="Maîtriser les routes avec les pneus parfaits">
+                    <div class="ad-image-content">
+                        <h3>Maîtriser les Routes</h3>
+                        <p>Libérez le potentiel de votre véhicule</p>
+                        <div class="ad-image-models">
+                            <span class="ad-image-model">NY-901</span>
+                            <span class="ad-image-model">NY-HP187</span>
+                            <span class="ad-image-model">NY-AT187</span>
+                            <span class="ad-image-model">NY-05</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -912,7 +984,7 @@
                     </div>
                     <div class="contact-details">
                         <h3>Téléphone</h3>
-                        <p>+253 77 72 51 14</p>
+                        <p>+253 77 72 51 14 </p>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -987,59 +1059,4 @@
                     <li><a href="#">Vente de pneus</a></li>
                     <li><a href="#">Conseil technique</a></li>
                     <li><a href="#">Livraison sur site</a></li>
-                    <li><a href="#">Service après-vente</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Contact</h3>
-                <ul class="footer-links">
-                    <li><i class="fas fa-map-marker-alt"></i> Djibouti Ville</li>
-                    <li><i class="fas fa-phone"></i> +253 77 72 51 14</li>
-                    <li><i class="fas fa-envelope"></i> info@hydaglobaltrading.dj</li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Hyda Global Trading. Tous droits réservés. | Expert pneus à Djibouti</p>
-        </div>
-    </footer>
-
-    <script>
-        // Mobile Menu Toggle
-        document.querySelector('.mobile-menu').addEventListener('click', () => {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    if(window.innerWidth <= 768) {
-                        document.querySelector('.nav-links').style.display = 'none';
-                    }
-                }
-            });
-        });
-
-        // Form submission
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Merci pour votre message! Nous vous contacterons bientôt.');
-            this.reset();
-        });
-    </script>
-</body>
-</html>
+                    <li><a href="#">
