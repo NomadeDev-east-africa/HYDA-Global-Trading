@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyda Global Trading - Votre expert en pneus à Djibouti</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Variables et reset */
+        :root {
+            --primary: #2c3e50; /* Bleu foncé professionnel */
+            --secondary: #e74c3c; /* Rouge pour les accents */
+            --accent: #3498db; /* Bleu clair */
+            --light: #ecf0f1; /* Gris très clair */
+            --text: #2c3e50;
+            --dark: #1a252f; /* Noir bleuté */
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: var(--light);
+        }
+
+        /* Header et navigation */
+        header {
+            background-color: var(--primary);
+            color: var(--light);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .logo i {
+            color: var(--secondary);
+            margin-right: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        .cta-button {
+            background-color: var(--secondary);
+            color: var(--light);
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .cta-button:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Section Hero */
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://images.unsplash.com/photo-1603712610490-8f61c8c0e70b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            color: var(--light);
+            text-align: center;
+            padding: 0 2rem;
+            margin-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--light);
+        }
+
+        .btn-primary:hover {
+            background-color: #c0392b;
+            transform: translateY(-3px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--light);
+            border: 2px solid var(--light);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+
+        /* Section À propos */
+        .about {
+            padding: 6rem 2rem;
+            background-color: var(--light);
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 4rem;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--text);
+            font-size: 1.1rem;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Section Produits */
+        .products {
+            padding: 6rem 2rem;
+            background-color: var(--primary);
+            color: var(--light);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background-color: var(--light);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            color: var(--text);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-icon {
+            background-color: rgba(231, 76, 60, 0.1);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+
+        .product-icon i {
+            font-size: 2rem;
+            color: var(--secondary);
+        }
+
+        .product-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .product-card p {
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+
+        .product-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-features li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .product-features i {
+            color: var(--secondary);
+            margin-right: 0.5rem;
+        }
+
+        /* Section Gamme de Produits */
+        .range {
+            padding: 6rem 2rem;
+            background-color: var(--light);
+        }
+
+        .range-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .range-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .range-card {
+            background-color: var(--light);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid #ddd;
+        }
+
+        .range-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .range-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .range-card p {
+            color: var(--text);
+            margin-bottom: 1rem;
+        }
+
+        /* Section Références */
+        .references {
+            padding: 6rem 2rem;
+            background-color: var(--primary);
+            color: var(--light);
+        }
+
+        .references-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .reference-card {
+            background-color: var(--light);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            color: var(--text);
+        }
+
+        .reference-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1rem;
+        }
+
+        .reference-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .reference-specs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .spec-item {
+            margin-bottom: 1rem;
+        }
+
+        .spec-label {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .spec-value {
+            color: var(--text);
+        }
+
+        /* Section Publicité */
+        .advertisement {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: var(--light);
+            text-align: center;
+        }
+
+        .ad-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .ad-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .ad-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .ad-models {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .ad-model {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 1rem 1.5rem;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+
+        .ad-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .ad-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .ad-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Section Contact */
+        .contact {
+            padding: 6rem 2rem;
+            background-color: var(--light);
+        }
+
+        .contact-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            background-color: var(--primary);
+            color: var(--light);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-details h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-form {
+            background-color: var(--light);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--light);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--light);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--secondary);
+            color: var(--light);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 250px;
+            }
+
+            .about-content {
+                flex-direction: column;
+            }
+
+            .ad-models {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-tire"></i>
+                <span>Hyda Global Trading</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#products">Produits</a></li>
+                <li><a href="#range">Gammes</a></li>
+                <li><a href="#references">Références</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="cta-button">Devis Gratuit</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Expert en pneus à Djibouti</h1>
+            <p>Hyda Global Trading vous propose la plus large gamme de pneus de qualité pour tous vos véhicules. Performance, sécurité et durabilité garanties.</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn btn-primary">Découvrir nos produits</a>
+                <a href="#contact" class="btn btn-secondary">Nous contacter</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Hyda Global Trading</h2>
+                <p>Forte de plusieurs années d'expérience, Hyda Global Trading est le partenaire de confiance pour tous vos besoins en pneus à Djibouti. Nous nous engageons à fournir des produits de qualité supérieure adaptés aux conditions routières locales.</p>
+                <p>Notre équipe d'experts vous conseille dans le choix des pneus les plus adaptés à votre véhicule et à votre style de conduite, pour une sécurité optimale sur les routes de Djibouti.</p>
+                <p>Nous proposons une large gamme de pneus pour voitures, camionnettes, camions et véhicules tout-terrain, provenant des meilleurs fabricants mondiaux.</p>
+            </div>
+            <div class="about-image">
+                <!-- Image représentative de l'entreprise -->
+                <div style="background-color: #f8f9fa; padding: 2rem; text-align: center; height: 100%; display: flex; flex-direction: column; justify-content: center;">
+                    <i class="fas fa-warehouse" style="font-size: 4rem; color: #2c3e50; margin-bottom: 1rem;"></i>
+                    <h3 style="color: #2c3e50; margin-bottom: 1rem;">Notre entrepôt à Djibouti</h3>
+                    <p>Des stocks importants pour répondre rapidement à vos besoins</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Produits -->
+    <section class="products" id="products">
+        <div class="section-title">
+            <h2>Nos Catégories de Pneus</h2>
+            <p>Découvrez notre gamme complète de pneus adaptés à tous les véhicules et usages</p>
+        </div>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-icon">
+                    <i class="fas fa-car"></i>
+                </div>
+                <h3>Pneus Voiture</h3>
+                <p>Pneus haute performance pour voitures particulières, adaptés aux routes urbaines et interurbaines de Djibouti.</p>
+                <ul class="product-features">
+                    <li><i class="fas fa-check"></i> Confort et silence</li>
+                    <li><i class="fas fa-check"></i> Tenue de route optimale</li>
+                    <li><i class="fas fa-check"></i> Longue durée de vie</li>
+                    <li><i class="fas fa-check"></i> Résistance à la chaleur</li>
+                </ul>
+            </div>
+            <div class="product-card">
+                <div class="product-icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <h3>Pneus Utilitaire</h3>
+                <p>Pneus renforcés pour camionnettes et véhicules utilitaires, conçus pour les charges lourdes.</p>
+                <ul class="product-features">
+                    <li><i class="fas fa-check"></i> Renfort carcasse</li>
+                    <li><i class="fas fa-check"></i> Charge élevée</li>
+                    <li><i class="fas fa-check"></i> Résistance à l'abrasion</li>
+                    <li><i class="fas fa-check"></i> Stabilité renforcée</li>
+                </ul>
+            </div>
+            <div class="product-card">
+                <div class="product-icon">
+                    <i class="fas fa-mountain"></i>
+                </div>
+                <h3>Pneus 4x4</h3>
+                <p>Pneus tout-terrain et tout-chemin pour véhicules 4x4, parfaits pour les pistes djiboutiennes.</p>
+                <ul class="product-features">
+                    <li><i class="fas fa-check"></i> Adhérence hors route</li>
+                    <li><i class="fas fa-check"></i> Protection des flancs</li>
+                    <li><i class="fas fa-check"></i> Drainage optimal</li>
+                    <li><i class="fas fa-check"></i> Robustesse exceptionnelle</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Gamme de Produits -->
+    <section class="range" id="range">
+        <div class="section-title">
+            <h2>Nos Gammes de Produits</h2>
+            <p>Découvrez nos différentes gammes de pneus pour répondre à tous vos besoins</p>
+        </div>
+        <div class="range-content">
+            <div class="range-grid">
+                <div class="range-card">
+                    <h3>Gamme NY</h3>
+                    <p>Pneus haute performance pour un confort et une sécurité optimale</p>
+                    <div class="product-features">
+                        <li><i class="fas fa-check"></i> NY-05</li>
+                        <li><i class="fas fa-check"></i> NY-901</li>
+                        <li><i class="fas fa-check"></i> NY-HP187</li>
+                        <li><i class="fas fa-check"></i> NY-AT187</li>
+                    </div>
+                </div>
+                <div class="range-card">
+                    <h3>Gamme H</h3>
+                    <p>Pneus utilitaires robustes pour charges lourdes et usage intensif</p>
+                    <div class="product-features">
+                        <li><i class="fas fa-check"></i> H0105</li>
+                        <li><i class="fas fa-check"></i> H0107</li>
+                        <li><i class="fas fa-check"></i> H0302</li>
+                        <li><i class="fas fa-check"></i> H0308A</li>
+                    </div>
+                </div>
+                <div class="range-card">
+                    <h3>Gamme Premium</h3>
+                    <p>Pneus haut de gamme pour performances et durabilité exceptionnelles</p>
+                    <div class="product-features">
+                        <li><i class="fas fa-check"></i> Confort ultime</li>
+                        <li><i class="fas fa-check"></i> Faible résistance</li>
+                        <li><i class="fas fa-check"></i> Freinage optimal</li>
+                        <li><i class="fas fa-check"></i> Économie de carburant</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Références -->
+    <section class="references" id="references">
+        <div class="section-title">
+            <h2>Nos Références de Pneus</h2>
+            <p>Découvrez quelques-unes de nos références les plus populaires</p>
+        </div>
+        <div class="references-content">
+            <div class="reference-card">
+                <div class="reference-header">
+                    <div class="reference-title">Pneu 155R12C</div>
+                </div>
+                <div class="reference-specs">
+                    <div class="spec-item">
+                        <div class="spec-label">Largeur</div>
+                        <div class="spec-value">155 mm</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-label">Type</div>
+                        <div class="spec-value">Radial (R)</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-label">Diamètre</div>
+                        <div class="spec-value">12 pouces</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-label">Renfort</div>
+                        <div class="spec-value">8PR</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-label">Indice de charge</div>
+                        <div class="spec-value">88/86 (560 kg)</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-label">Indice de vitesse</div>
+                        <div class="spec-value">Q (jusqu'à 160 km/h)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="reference-card">
+                <div class="reference-header">
+                    <div class="reference-title">Pneu 195R14C</div>
+                </div>
+                <div class="reference-specs">
+                    <div class="spec-item">
+                        <div class="spec-label">Largeur</div>
+                        <div class="spec-value">195 mm</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-label">Type</div>
+                        <div class="spec-value">Radial (R)</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-label">Diamètre</div>
+                        <div class="spec-value">14 pouces</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-label">Renfort</div>
+                        <div class="spec-value">8PR</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-label">Indice de charge</div>
+                        <div class="spec-value">106/104 (950 kg)</div>
+                    </div>
+                    <div class="spec-item">
+                        <div class="spec-label">Indice de vitesse</div>
+                        <div class="spec-value">R (jusqu'à 170 km/h)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Publicité -->
+    <section class="advertisement">
+        <div class="ad-content">
+            <h2>Maîtriser les Routes</h2>
+            <p>Libérez le potentiel de votre véhicule avec les pneus parfaits</p>
+            <div class="ad-models">
+                <div class="ad-model">NY-901</div>
+                <div class="ad-model">NY-HP187</div>
+                <div class="ad-model">NY-AT187</div>
+                <div class="ad-model">NY-05</div>
+            </div>
+            
+            <div class="ad-images">
+                <div class="ad-image">
+                    <img src="Images/Publicite1.jpeg" alt="Gamme de pneus pour votre flotte de véhicules">
+                </div>
+                <div class="ad-image">
+                    <img src="Images/publicite2.jpeg" alt="Maîtriser les routes avec les pneus parfaits">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section class="contact" id="contact">
+        <div class="section-title">
+            <h2>Contactez-nous</h2>
+            <p>Notre équipe est à votre disposition pour répondre à toutes vos questions</p>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Adresse</h3>
+                        <p>Hyda Global Trading<br>Djibouti Ville, Djibouti</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Téléphone</h3>
+                        <p>+253 77 72 51 14</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Email</h3>
+                        <p>info@hydaglobaltrading.dj</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Horaires d'ouverture</h3>
+                        <p>Lundi - Vendredi: 8h00 - 18h00<br>Samedi: 8h00 - 13h00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Adresse email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Envoyer le message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Hyda Global Trading</h3>
+                <p>Votre expert en pneus à Djibouti. Performance, sécurité et qualité garanties.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Liens rapides</h3>
+                <ul class="footer-links">
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#products">Produits</a></li>
+                    <li><a href="#range">Gammes</a></li>
+                    <li><a href="#references">Références</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Nos services</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Vente de pneus</a></li>
+                    <li><a href="#">Conseil technique</a></li>
+                    <li><a href="#">Livraison sur site</a></li>
+                    <li><a href="#">Service après-vente</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt"></i> Djibouti Ville</li>
+                    <li><i class="fas fa-phone"></i> +253 77 72 51 14</li>
+                    <li><i class="fas fa-envelope"></i> info@hydaglobaltrading.dj</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Hyda Global Trading. Tous droits réservés. | Expert pneus à Djibouti</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu').addEventListener('click', () => {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if(window.innerWidth <= 768) {
+                        document.querySelector('.nav-links').style.display = 'none';
+                    }
+                }
+            });
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Merci pour votre message! Nous vous contacterons bientôt.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
